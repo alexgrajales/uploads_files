@@ -1,0 +1,5 @@
+venv
+.idea
+settings.py
+__pycache__
+out_put_files/*.csv
