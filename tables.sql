@@ -38,3 +38,18 @@ CREATE TABLE sandbox.data_covid_uci_bogota(
     "Total camas UCI COVID 19 reportadas por IPS" varchar(1000),
     "Ocupación UCI COVID 19" varchar(1000)
 );
+
+-----------------metabase ----------------
+--covid colombia por estado--
+select estado_actual, count(*) from "datawarehouse"."covid_colombia" group by estado_actual;
+--covid colombia por estado tipo de recuperacion--
+select tipo_recuperacion, count(*) from "datawarehouse"."covid_colombia" group by tipo_recuperacion
+--covid casos por departamento--
+select departamento, count(*) cantidad_casos from "datawarehouse"."covid_colombia"
+group by departamento order by cantidad_casos
+--covid casos por municipio--
+select municipio, count(*) cantidad_casos from "datawarehouse"."covid_colombia"
+group by municipio order by cantidad_casos
+--covid muerte y fecha--
+select fecha_muerte, count(*) from "datawarehouse"."covid_colombia" where fecha_muerte != '' group by fecha_muerte order by fecha_muerte desc
+
