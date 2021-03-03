@@ -10,3 +10,9 @@ data_ciudades = "https://raw.githubusercontent.com/panchicore/dane_colombia/mast
 out_name_s3_data_ciudades='data_ciudades'
 output_data_ciudades = './out_put_files/data_ciudades.csv'
 name_ciudades = 'data_ciudades.csv'
+#jovenes
+data_SPA_jovenes = "http://medata.gov.co/node/17834/download"
+out_name_s3_SPA_jovenes='data_SPA_jovenes'
+output_data_SPA_jovenes = './out_put_files/data_SPA_jovenes.csv'
+name_SPA_jovenes = 'data_SPA_jovenes.csv'
+

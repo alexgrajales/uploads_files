@@ -24,6 +24,13 @@ def upload_files():
     #                 const.name_ciudades)
     # print("end file data temp s3")
 
+    pf.download_files(const.data_SPA_jovenes, const.output_data_SPA_jovenes)
+    print("save file data SPA_jovenes temp s3")
+    paws.upload_aws(const.output_data_SPA_jovenes, settings.bucket,
+                    '{}_temp'.format(const.out_name_s3_SPA_jovenes),
+                    const.name_SPA_jovenes)
+    print("end file data temp s3")
+
 
 def main():
     upload_files()
